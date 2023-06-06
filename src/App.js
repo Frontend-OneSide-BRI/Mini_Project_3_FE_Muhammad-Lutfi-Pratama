@@ -1,9 +1,7 @@
+import Router from "./routes/router";
+
 function App() {
-  return (
-    <div className="text-center App">
-      <p>Home</p>
-    </div>
-  );
+  return <Router />;
 }
 
 export default App;
