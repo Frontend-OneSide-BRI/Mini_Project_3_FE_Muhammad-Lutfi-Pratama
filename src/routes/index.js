@@ -1,6 +1,8 @@
+import Home from "../Pages/Home";
+
 const routes = [
   {
-    element: <h1> Home </h1>,
+    element: <Home />,
     path: "/",
     layout: true,
     access: "admin",
