@@ -1,8 +1,9 @@
 import { Home } from "../pages";
+import Login from "../pages/Login";
 
 const routes = [
   {
-    element: <Home />,
+    element: <Login />,
     path: "/",
     layout: true,
     access: "admin",
