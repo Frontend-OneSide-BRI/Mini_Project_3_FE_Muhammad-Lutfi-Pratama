@@ -10,14 +10,14 @@ export default function Header() {
           className="object-cover h-[500px] md:h-[90vh] md:rounded-3xl w-full shadow-2xl rounded-b-[60px]"
         />
       </section>
-      <section className="z-10 w-full md:w-4/6 lg:w-7/12 md:float-right order-first md:order-none px-6 rounded-b-[60px] bg-gray-800/20 backdrop-filter backdrop-blur-lg md:backdrop-filter-none md:bg-transparent md:py-6">
-        <nav className="flex items-center justify-between w-full mx-auto">
+      <section className="z-10 w-full md:w-4/6 lg:w-7/12 md:float-right order-first md:order-none px-6 rounded-b-[60px] bg-gray-800/20 backdrop-filter backdrop-blur-lg md:backdrop-filter-none md:bg-transparent md:py-6 lg:pl-16">
+        <nav className="flex items-center justify-between w-full mx-auto md:pl-8">
           <img
             src={`${logoHorizontalDark}`}
             className="w-[130px] md:hidden"
             alt="logo"
           />
-          <ul className="flex flex-wrap items-center justify-center w-2/4 gap-8 text-white lg:4/6 md:text-black">
+          <ul className="flex flex-wrap items-center justify-center w-[200px] gap-8 text-white lg:4/6 md:text-black">
             <li className="w-16 text-lg font-semibold cursor-pointer hover:text-lg">
               Home
             </li>
@@ -26,7 +26,7 @@ export default function Header() {
             </li>
           </ul>
           <button className="lg:w-[140px] shadow-2xl relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-md text-white font-medium hover:scale-105 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 md:rounded-full md:px-0.5 md:py-0.5">
-            <span className="relative px-6 py-2 transition-all duration-75 ease-in rounded-md group-hover:bg-opacity-0 md:text-black hover:text-white md:bg-white md:rounded-full md:px-12 md:py-2 md:text-sm">
+            <span className="relative px-6 py-2 text-xs transition-all duration-75 ease-in rounded-md group-hover:bg-opacity-0 sm:text-md md:text-black hover:text-white md:bg-white md:rounded-full md:px-12 md:py-2 md:text-sm">
               Login
             </span>
           </button>

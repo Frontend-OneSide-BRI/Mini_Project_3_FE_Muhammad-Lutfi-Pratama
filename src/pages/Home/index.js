@@ -1,11 +1,15 @@
 import React from "react";
-import logoHorizontal from "src/assets/Logo/logo-horizontal.png";
 import Header from "./header";
+import Banner from "./banner";
+import PopularMovie from "./popular-movie";
 
 export default function Home() {
   return (
-    <>
+    <div>
       <Header />
-    </>
+      <Banner />
+      {/* Popular */}
+      <PopularMovie />
+    </div>
   );
 }
