@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "./header";
 import Banner from "./banner";
 import PopularMovie from "./popular-movie";
+import SwipeMovie from "./swipe-movie";
 
 export default function Home() {
   const [activePage, setActivePage] = useState("home");
@@ -18,7 +19,14 @@ export default function Home() {
           <PopularMovie />
         </>
       ) : (
-        <Banner />
+        <>
+          <Banner
+            title="Home of your favorites and more"
+            description="Watch thousands of shows and movies, with plans starting at $5.99/month."
+          />
+          <SwipeMovie title="Trending" />
+          <SwipeMovie title="Genre Favorite" />
+        </>
       )}
     </div>
   );

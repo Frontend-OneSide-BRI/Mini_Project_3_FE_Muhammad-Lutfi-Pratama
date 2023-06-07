@@ -10,10 +10,10 @@ export default function Header({ activePageListener }) {
   };
 
   const handleStyleActivePage = selectedPage => {
-    if (selectedPage === "home") {
-      return "w-16 text-lg font-semibold cursor-pointer hover:text-lg";
+    if (activePage === selectedPage) {
+      return "w-16 text-lg transition-all font-semibold cursor-pointer hover:text-lg";
     } else {
-      return "w-16 opacity-50 cursor-pointer hover:opacity-100 text-md hover:text-lg";
+      return "w-16 opacity-50 transition-all cursor-pointer hover:opacity-100 text-md hover:text-lg";
     }
   };
 
