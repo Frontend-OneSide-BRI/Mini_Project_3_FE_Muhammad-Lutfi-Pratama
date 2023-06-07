@@ -3,7 +3,7 @@ import Login from "../pages/Login";
 
 const routes = [
   {
-    element: <Login />,
+    element: <Home />,
     path: "/",
     layout: true,
     access: "admin",
