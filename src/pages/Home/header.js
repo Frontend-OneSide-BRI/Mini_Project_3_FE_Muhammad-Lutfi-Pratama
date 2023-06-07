@@ -1,4 +1,4 @@
-import logoHorizontalDark from "src/assets/Logo/logo-horizontal-dark.png";
+import { logoHorizontalDark } from "src/assets/Logo";
 
 export default function Header() {
   return (
@@ -7,7 +7,7 @@ export default function Header() {
         <img
           src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1925&q=80"
           alt="banner"
-          className="object-cover h-[500px] md:h-[90vh] md:rounded-3xl w-full shadow-2xl rounded-b-[60px]"
+          className="object-cover h-[500px] md:h-[95vh] md:rounded-3xl w-full shadow-2xl rounded-b-[60px]"
         />
       </section>
       <section className="z-10 w-full md:w-4/6 lg:w-7/12 md:float-right order-first md:order-none px-6 rounded-b-[60px] bg-gray-800/20 backdrop-filter backdrop-blur-lg md:backdrop-filter-none md:bg-transparent md:py-6 lg:pl-16">
@@ -22,7 +22,7 @@ export default function Header() {
               Home
             </li>
             <li className="w-16 opacity-50 cursor-pointer hover:opacity-100 text-md hover:text-lg">
-              Trending
+              Curated
             </li>
           </ul>
           <button className="lg:w-[140px] shadow-2xl relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-md text-white font-medium hover:scale-105 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 md:rounded-full md:px-0.5 md:py-0.5">
