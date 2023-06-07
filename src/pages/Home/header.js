@@ -1,6 +1,22 @@
+import { useState } from "react";
 import { logoHorizontalDark } from "src/assets/Logo";
 
-export default function Header() {
+export default function Header({ activePageListener }) {
+  let [activePage, setActivePage] = useState("home");
+
+  const handleActivePage = page => {
+    activePageListener(page);
+    setActivePage(page);
+  };
+
+  const handleStyleActivePage = selectedPage => {
+    if (selectedPage === "home") {
+      return "w-16 text-lg font-semibold cursor-pointer hover:text-lg";
+    } else {
+      return "w-16 opacity-50 cursor-pointer hover:opacity-100 text-md hover:text-lg";
+    }
+  };
+
   return (
     <div className="relative flex flex-col justify-between w-full md:flex-row md:inline-block md:p-4">
       <section className="absolute z-0 w-full md:ml-6 md:w-2/6 lg:w-5/12 md:inline-block">
@@ -18,10 +34,16 @@ export default function Header() {
             alt="logo"
           />
           <ul className="flex flex-wrap items-center justify-center w-[200px] gap-8 text-white lg:4/6 md:text-black">
-            <li className="w-16 text-lg font-semibold cursor-pointer hover:text-lg">
+            <li
+              onClick={() => handleActivePage("home")}
+              className={handleStyleActivePage("home")}
+            >
               Home
             </li>
-            <li className="w-16 opacity-50 cursor-pointer hover:opacity-100 text-md hover:text-lg">
+            <li
+              onClick={() => handleActivePage("curated")}
+              className={handleStyleActivePage("curated")}
+            >
               Curated
             </li>
           </ul>
