@@ -1,9 +1,10 @@
+import Browse from "src/pages/Browse";
 import { Home } from "../pages";
 import Login from "../pages/Login";
 
 const routes = [
   {
-    element: <Home />,
+    element: <Browse />,
     path: "/",
     layout: true,
     access: "admin",

@@ -18,7 +18,9 @@ export default function SwipeMovie({ title }) {
         >
           {[...Array(10)].map((_, index) => (
             <SwiperSlide>
-              <div className="w-full h-[260px] xl:h-[440px] 2xl:h-[540px] sm:h-[340px] ml-6 md:ml-4 lg:ml-2 xl:ml-0 cursor-pointer bg-gray-400 rounded-lg"></div>
+              <div className="w-full h-[260px] xl:h-[440px] 2xl:h-[540px] sm:h-[340px] ml-6 md:ml-4 lg:ml-2 xl:ml-0 cursor-pointer bg-gray-400 rounded-lg">
+                {/* Images */}
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
