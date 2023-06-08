@@ -6,7 +6,9 @@ export default function MovieStatusBadge({
 }) {
   return (
     <div className={`flex items-center text-white lg:${margin}`}>
-      <div className={`mr-4 bg-pink-700 ${width} ${height} rounded-2xl`}></div>
+      <div
+        className={`mr-4 bg-white/30 ${width} ${height} rounded-2xl`}
+      ></div>
       <p>{text}</p>
     </div>
   );
