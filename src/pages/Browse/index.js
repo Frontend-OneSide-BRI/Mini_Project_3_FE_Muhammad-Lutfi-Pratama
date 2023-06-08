@@ -5,19 +5,30 @@ import {
   UserStatusContainer,
 } from "src/components/Molecules/Container";
 import { PrimaryButton } from "src/components/Atom/Button";
+import { useState } from "react";
 
 export default function Browse() {
+  let [activePage, setActivePage] = useState("browse");
+
   return (
     <div className="flex flex-col py-4 pr-4 md:flex-row">
-      <NavbarBrowse />
+      <NavbarBrowse activePageListener={page => setActivePage(page)} />
       <main className="flex flex-col pt-24 md:overflow-scroll md:pt-0 xl:h-screen md:w-9/12 bg-slate-100 rounded-2xl lg:flex-row">
-        <MoviePanel />
-        {/* Right Panel */}
-        <div className="flex flex-col items-center p-12 lg:p-0 lg:pt-16 lg:pr-6 lg:pl-2">
-          <UserStatusContainer />
-          <UserSessionContainer />
-          <PrimaryButton text={"Logout"} />
-        </div>
+        {activePage === "browse" ? (
+          <>
+            <MoviePanel />
+            {/* Right Panel */}
+            <div className="flex flex-col items-center p-12 lg:p-0 lg:pt-16 lg:pr-6 lg:pl-2">
+              <UserStatusContainer />
+              <UserSessionContainer />
+              <PrimaryButton text={"Logout"} />
+            </div>
+          </>
+        ) : (
+          <>
+            <h1 className="my-8 text-3xl font-extrabold text-center">My Favorite Movie</h1>
+          </>
+        )}
       </main>
     </div>
   );

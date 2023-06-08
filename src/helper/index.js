@@ -1,0 +1,1 @@
+export {default as FormatString} from './format-string';

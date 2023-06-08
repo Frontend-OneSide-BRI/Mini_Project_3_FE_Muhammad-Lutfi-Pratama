@@ -1,9 +1,9 @@
-import React from "react";
+import { Fragment, useState } from "react";
 import { MovieShowMenuIcon } from "src/components/Atom/MenuIcon";
 
 export default function MovieShowTopBar({ title, description }) {
   return (
-    <React.Fragment>
+    <Fragment>
       <div className="flex flex-col items-center justify-between w-full gap-10 py-4 pt-10 md:justify-center md:flex-wrap lg:justify-between lg:flex-nowrap md:pt-8 md:flex-row">
         {/* Header Profile Movie */}
         <div className="flex items-center gap-4">
@@ -12,9 +12,7 @@ export default function MovieShowTopBar({ title, description }) {
             <h1 className="text-2xl font-semibold text-white md:text-xl">
               {title}
             </h1>
-            <p className="text-sm text-white md:text-xs">
-              {description}
-            </p>
+            <p className="text-sm text-white md:text-xs">{description}</p>
           </div>
         </div>
         {/* Header tools */}
@@ -24,6 +22,6 @@ export default function MovieShowTopBar({ title, description }) {
           <MovieShowMenuIcon width={10} />
         </div>
       </div>
-    </React.Fragment>
+    </Fragment>
   );
 }
