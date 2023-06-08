@@ -15,7 +15,14 @@ export const moviesAPI = createApi({
       query: () => ({ url: "/trending/movie/week", headers: HEADER }),
     }),
     getMovieById: builder.query({
-      query: id => `/movie/${id}?api_key=${API_KEY}`,
+      query: id => ({
+        url: `/movie/${id}`,
+        headers: HEADER,
+      }),
+    }),
+    searchMovie: builder.query({
+      query: search =>
+        `search/movie?api_key=${API_KEY}&language=en-US&query=${search}&page=1&include_adult=false`,
     }),
   }),
 });
@@ -24,4 +31,5 @@ export const {
   useGetPopularMovieQuery,
   useTrendingMoviesWeeklyQuery,
   useGetMovieByIdQuery,
+  useSearchMovieQuery,
 } = moviesAPI;
