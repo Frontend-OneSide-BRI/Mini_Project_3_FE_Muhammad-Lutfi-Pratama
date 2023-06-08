@@ -4,21 +4,28 @@ import Login from "../pages/Login";
 
 const routes = [
   {
-    element: <Browse />,
+    element: <Home />,
     path: "/",
-    layout: true,
+    access: "admin",
+  },
+  {
+    element: <Login />,
+    path: "/login",
+    access: "member",
+  },
+  {
+    element: <Browse />,
+    path: "/browse",
     access: "admin",
   },
   {
     element: <h1>Not Found</h1>,
     path: "*",
-    layout: true,
     access: "member",
   },
   {
     element: <h1>Detail</h1>,
     path: "/detail",
-    layout: false,
     access: "member",
   },
 ];

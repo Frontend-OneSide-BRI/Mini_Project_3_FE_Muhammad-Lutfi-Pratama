@@ -5,17 +5,9 @@ function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        {routes.map(route =>
-          route.layout ? (
-            <Route
-              key={route.path}
-              path={route.path}
-              element={route.element}
-            />
-          ) : (
-            <Route key={route.path} path={route.path} element={route.element} />
-          )
-        )}
+        {routes.map(route => (
+          <Route key={route.path} path={route.path} element={route.element} />
+        ))}
       </Routes>
     </BrowserRouter>
   );

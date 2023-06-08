@@ -5,11 +5,24 @@ import {
   UserStatusContainer,
 } from "src/components/Molecules/Container";
 import { PrimaryButton } from "src/components/Atom/Button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BASE_API_KEY } from "src/config";
+import { useNavigate } from "react-router-dom";
 
 export default function Browse() {
   let [activePage, setActivePage] = useState("browse");
+  let navigate = useNavigate();
+
+  useEffect(() => {
+    const user = localStorage.getItem("user");
+    // TODO: ?Check token key if validate
+
+    if (user) {
+      navigate("/browse");
+    } else {
+      navigate("/login");
+    }
+  }, [navigate]);
 
   console.log(BASE_API_KEY);
 
@@ -29,7 +42,9 @@ export default function Browse() {
           </>
         ) : (
           <>
-            <h1 className="my-8 text-3xl font-extrabold text-center">My Favorite Movie</h1>
+            <h1 className="my-8 text-3xl font-extrabold text-center">
+              My Favorite Movie
+            </h1>
           </>
         )}
       </main>

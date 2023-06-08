@@ -1,5 +1,6 @@
 import { Fragment, useState } from "react";
 import { MovieShowMenuIcon } from "src/components/Atom/MenuIcon";
+import { ChevronRightIcon } from "@heroicons/react/20/solid";
 
 export default function MovieShowTopBar({ title, description }) {
   return (
@@ -19,7 +20,7 @@ export default function MovieShowTopBar({ title, description }) {
         <div className="flex justify-end gap-5">
           <MovieShowMenuIcon />
           <MovieShowMenuIcon />
-          <MovieShowMenuIcon width={10} />
+          <MovieShowMenuIcon width={10} Icon={ChevronRightIcon} />
         </div>
       </div>
     </Fragment>
