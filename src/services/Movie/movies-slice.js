@@ -4,15 +4,15 @@ const moviesSlice = createSlice({
   name: "moviesSlice",
   initialState: {
     isLoading: false,
-    popularMovies: [],
+    popularMoviesData: [],
     trendingWeeklyMovies: [],
   },
   reducers: {
     popularMovies: (state, movies) => {
-      state.popularMovies = movies;
+      state.popularMoviesData = movies.payload;
     },
     trendingWeeklyMovies: (state, movies) => {
-      state.trendingWeeklyMovies = movies;
+      state.trendingWeeklyMovies = movies.payload;
     },
   },
 });

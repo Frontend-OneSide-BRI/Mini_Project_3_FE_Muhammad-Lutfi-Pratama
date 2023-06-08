@@ -6,7 +6,7 @@ import MovieShowTopBar from "../Molecules/TopBar/movie-show-topbar";
 import { MovieCategorySwipe } from "../Molecules/Swipe";
 import { MovieCategoryTopbar } from "../Molecules/TopBar";
 
-export default function MoviePanel() {
+export default function MoviePanel({ movies }) {
   let [activeTab, setActiveTab] = useState("trailer");
 
   return (
@@ -14,15 +14,19 @@ export default function MoviePanel() {
       {/* Movie Panel */}
       <section className="pb-12 md:px-12 md:h-[93%] m-5 rounded-[50px] bg-indigo-950 lg:w-4/6 md:pt-6 md:pb-24 xl:pt-2 lg:h-[100%]">
         <MovieShowTopBar
-          title={"Lorem Ipsum"}
-          description={"lorem ipsum dolor sum ae fjkkk"}
+          title={movies[0].title}
+          description={movies[0].original_title}
         />
         <MovieShowTabs activeTabListener={tab => setActiveTab(tab)} />
-        {activeTab === "trailer" ? <MovieShowCard /> : <p>Detail</p>}
+        {activeTab === "trailer" ? (
+          <MovieShowCard movie={movies[0]} />
+        ) : (
+          <p>Detail</p>
+        )}
         {/* Movie Swipe Category */}
         <div className="w-full px-10 mt-10 md:px-0 overflow-hidden xl:h-[35vh] ">
           <MovieCategoryTopbar />
-          <MovieCategorySwipe />
+          <MovieCategorySwipe movies={movies} />
         </div>
       </section>
     </Fragment>

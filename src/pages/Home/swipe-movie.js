@@ -11,12 +11,7 @@ export default function SwipeMovie({ title, movies }) {
         <Divider color="bg-gray-500/40" />
       </section>
       <section className="mt-6">
-        <Swiper
-          spaceBetween={20}
-          slidesPerView={3}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={swiper => console.log(swiper)}
-        >
+        <Swiper spaceBetween={20} slidesPerView={3}>
           {movies.map((movie, index) => (
             <SwiperSlide key={index}>
               <div className="w-full h-[260px] xl:h-[440px] 2xl:h-[540px] sm:h-[340px] ml-6 md:ml-4 lg:ml-2 xl:ml-0 cursor-pointer bg-gray-400 rounded-lg">
