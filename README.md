@@ -3,7 +3,7 @@
 - React
 - React Router DOM
 - Redux Toolkit Query
-- Eslint, Prettier, Lint Staged, Husky
+- Eslint, Prettier
 - Swiper
 - Tailwindcss
 
@@ -17,7 +17,6 @@
   - Get movie detail
 - Authentication
   - Login
-  - Register
 - Structured folder
 - Responsive design
 
