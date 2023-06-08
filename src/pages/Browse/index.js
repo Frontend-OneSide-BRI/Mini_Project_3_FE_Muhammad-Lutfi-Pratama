@@ -45,7 +45,7 @@ export default function Browse() {
       <main className="flex flex-col pt-24 md:overflow-scroll md:pt-0 xl:h-screen md:w-9/12 bg-slate-100 rounded-2xl lg:flex-row">
         {activePage === "browse" ? (
           <>
-            {searchResult?.results.length > 0 ? (
+            {searchResult?.results?.length > 0 ? (
               <div className="flex flex-wrap justify-center gap-5 p-12 flex-cols">
                 {searchResult?.results.map((item, index) => {
                   return (

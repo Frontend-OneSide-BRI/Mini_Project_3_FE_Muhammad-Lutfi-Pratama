@@ -20,6 +20,18 @@
 - Structured folder
 - Responsive design
 
+| ![Home Page](./screenshot/ss-1.png) |
+| :-------------------------------------: |
+|               _Home Page_               |
+
+| ![Browse Page](./screenshot/ss-2.png) |
+| :--------------------------------------------------: |
+|                 _Browse Page_                  |
+
+| ![Login Page](./screenshots/ss-3.png) |
+| :--------------------------------------------------------------------: |
+|                      _Login Page_                      |
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
