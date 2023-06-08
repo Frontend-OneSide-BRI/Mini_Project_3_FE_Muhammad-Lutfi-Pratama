@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { logoHorizontalDark } from "src/assets/Logo";
 
 export default function Header({ activePageListener }) {
   let [activePage, setActivePage] = useState("home");
+  let navigate = useNavigate();
 
   const handleActivePage = page => {
     activePageListener(page);
@@ -47,7 +49,10 @@ export default function Header({ activePageListener }) {
               Curated
             </li>
           </ul>
-          <button className="lg:w-[140px] shadow-2xl relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-md text-white font-medium hover:scale-105 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 md:rounded-full md:px-0.5 md:py-0.5">
+          <button
+            onClick={() => navigate("/login")}
+            className="lg:w-[140px] shadow-2xl relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-md text-white font-medium hover:scale-105 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-purple-200  md:rounded-full md:px-0.5 md:py-0.5"
+          >
             <span className="relative px-6 py-2 text-xs transition-all duration-75 ease-in rounded-md group-hover:bg-opacity-0 sm:text-md md:text-black hover:text-white md:bg-white md:rounded-full md:px-12 md:py-2 md:text-sm">
               Login
             </span>

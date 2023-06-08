@@ -11,9 +11,14 @@ export const authAPI = createApi({
         headers: HEADER,
       }),
     }),
+    authenticateToken: builder.query({
+      query: token => ({
+        url: `/authenticate/${token}`,
+      }),
+    }),
   }),
 });
 
 // create RTK query hooks based on the generated endpoints for login TMDB API
 
-export const { useGenerateTokenQuery } = authAPI;
+export const { useGenerateTokenQuery, useAuthenticateTokenQuery } = authAPI;

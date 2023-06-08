@@ -4,13 +4,18 @@ import Banner from "./banner";
 import PopularMovie from "./popular-movie";
 import SwipeMovie from "./swipe-movie";
 import { useGetPopularMovieQuery } from "src/services/Movie/movies-api";
-import { useGenerateTokenQuery } from "src/services/Auth/auth-api";
 
 export default function Home() {
   const [activePage, setActivePage] = useState("home");
-  const { isLoading, data } = useGenerateTokenQuery();
-
-  // fetch popular movie from API rtk query
+  let [popularMovie, setPopularMovie] = useState([]);
+  const { isLoading, data } = useGetPopularMovieQuery();
+  
+  useEffect(() => {
+    if (data) {
+      setPopularMovie(data.results);
+    }
+  }, [data, popularMovie]);
+  
   return (
     <div>
       <Header activePageListener={page => setActivePage(page)} />
@@ -20,7 +25,7 @@ export default function Home() {
             title="Movie stories you'd expect"
             description="Global streaming home of Disney, Pixar, Marvel, Star Wars and National Geographic"
           />
-          <PopularMovie />
+          <PopularMovie isLoadingImg={isLoading} movies={popularMovie} />
         </>
       ) : (
         <>

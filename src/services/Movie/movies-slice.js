@@ -1,20 +1,16 @@
-// create redux slice for movies
-
 import { createSlice } from "@reduxjs/toolkit";
-import { useGetPopularMovieQuery } from "./movies-api";
 
-export const moviesSlice = createSlice({
-  name: "counter",
+const moviesSlice = createSlice({
+  name: "moviesSlice",
   initialState: {
     isLoading: false,
     popularMovies: [],
   },
   reducers: {
-    getPopularMovies:  state => {
-    },
+    popularMovies: state => {},
   },
 });
 
-export const { getPopularMovies } = moviesSlice.actions;
+export const { popularMovies } = moviesSlice.actions;
 
 export default moviesSlice.reducer;

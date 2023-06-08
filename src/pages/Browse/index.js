@@ -7,19 +7,20 @@ import {
 import { PrimaryButton } from "src/components/Atom/Button";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function Browse() {
   let [activePage, setActivePage] = useState("browse");
   let navigate = useNavigate();
+  const expiredToken = useSelector(state => state.expiresAt);
+  console.log("🚀 ~ expiredToken:", expiredToken);
 
   useEffect(() => {
-    const user = localStorage.getItem("user");
-    // TODO: ?Check token key if validate
-
-    if (user) {
+    const resToken = localStorage.getItem("token");
+    if (resToken) {
       navigate("/browse");
     } else {
-      navigate("/login");
+      navigate("/home");
     }
   }, [navigate]);
 
