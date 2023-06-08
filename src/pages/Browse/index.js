@@ -6,9 +6,12 @@ import {
 } from "src/components/Molecules/Container";
 import { PrimaryButton } from "src/components/Atom/Button";
 import { useState } from "react";
+import { BASE_API_KEY } from "src/config";
 
 export default function Browse() {
   let [activePage, setActivePage] = useState("browse");
+
+  console.log(BASE_API_KEY);
 
   return (
     <div className="flex flex-col py-4 pr-4 md:flex-row">
