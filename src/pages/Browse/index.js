@@ -8,8 +8,6 @@ import { PrimaryButton } from "src/components/Atom/Button";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import getPopularMovie from "src/services/Movie/movie";
-import { useGetPopularMovieQuery } from "src/services/Movie/movies-api";
-import LoadingIcon from "src/components/Atom/AnimatedIcon/loading-icon";
 
 export default function Browse() {
   let [activePage, setActivePage] = useState("browse");

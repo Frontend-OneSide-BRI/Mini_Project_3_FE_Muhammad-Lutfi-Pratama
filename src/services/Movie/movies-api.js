@@ -1,4 +1,4 @@
-import { BASE_URL, HEADER } from "src/config";
+import { API_KEY, BASE_URL, HEADER } from "src/config";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const moviesAPI = createApi({
@@ -14,8 +14,14 @@ export const moviesAPI = createApi({
     trendingMoviesWeekly: builder.query({
       query: () => ({ url: "/trending/movie/week", headers: HEADER }),
     }),
+    getMovieById: builder.query({
+      query: id => `/movie/${id}?api_key=${API_KEY}`,
+    }),
   }),
 });
 
-export const { useGetPopularMovieQuery, useTrendingMoviesWeeklyQuery } =
-  moviesAPI;
+export const {
+  useGetPopularMovieQuery,
+  useTrendingMoviesWeeklyQuery,
+  useGetMovieByIdQuery,
+} = moviesAPI;

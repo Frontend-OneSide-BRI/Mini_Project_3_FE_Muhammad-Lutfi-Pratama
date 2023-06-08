@@ -1,6 +1,7 @@
 import Browse from "src/pages/Browse";
 import { Home } from "../pages";
 import Login from "../pages/Login";
+import DetailPage from "src/pages/Detail";
 
 const routes = [
   {
@@ -16,6 +17,11 @@ const routes = [
   {
     element: <Browse />,
     path: "/browse",
+    access: "admin",
+  },
+  {
+    element: <DetailPage />,
+    path: "/movie/:id",
     access: "admin",
   },
   {
