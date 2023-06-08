@@ -5,12 +5,18 @@ const moviesSlice = createSlice({
   initialState: {
     isLoading: false,
     popularMovies: [],
+    trendingWeeklyMovies: [],
   },
   reducers: {
-    popularMovies: state => {},
+    popularMovies: (state, movies) => {
+      state.popularMovies = movies;
+    },
+    trendingWeeklyMovies: (state, movies) => {
+      state.trendingWeeklyMovies = movies;
+    },
   },
 });
 
-export const { popularMovies } = moviesSlice.actions;
+export const { popularMovies, trendingWeeklyMovies } = moviesSlice.actions;
 
 export default moviesSlice.reducer;

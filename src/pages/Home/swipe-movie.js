@@ -1,8 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Divider from "src/components/Atom/Divider";
+import { BASE_URL_IMG } from "src/config";
 
-export default function SwipeMovie({ title }) {
+export default function SwipeMovie({ title, movies }) {
   return (
     <div className="md:w-7/12 md:float-right lg:w-[53%] ">
       <section className="mt-12 mb-4 text-center">
@@ -16,10 +17,14 @@ export default function SwipeMovie({ title }) {
           onSlideChange={() => console.log("slide change")}
           onSwiper={swiper => console.log(swiper)}
         >
-          {[...Array(10)].map((_, index) => (
-            <SwiperSlide>
+          {movies.map((movie, index) => (
+            <SwiperSlide key={index}>
               <div className="w-full h-[260px] xl:h-[440px] 2xl:h-[540px] sm:h-[340px] ml-6 md:ml-4 lg:ml-2 xl:ml-0 cursor-pointer bg-gray-400 rounded-lg">
-                {/* Images */}
+                <img
+                  src={`${BASE_URL_IMG}/${movie.poster_path}`}
+                  alt={`${movie.title}`}
+                  className="object-cover w-full h-full rounded-lg"
+                />
               </div>
             </SwiperSlide>
           ))}

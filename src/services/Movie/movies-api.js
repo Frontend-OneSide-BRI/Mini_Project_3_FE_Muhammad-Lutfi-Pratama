@@ -11,7 +11,11 @@ export const moviesAPI = createApi({
         headers: HEADER,
       }),
     }),
+    trendingMoviesWeekly: builder.query({
+      query: () => ({ url: "/trending/movie/week", headers: HEADER }),
+    }),
   }),
 });
 
-export const { useGetPopularMovieQuery } = moviesAPI;
+export const { useGetPopularMovieQuery, useTrendingMoviesWeeklyQuery } =
+  moviesAPI;

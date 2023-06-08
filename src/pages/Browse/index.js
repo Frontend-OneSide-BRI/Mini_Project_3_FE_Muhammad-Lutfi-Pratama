@@ -20,7 +20,7 @@ export default function Browse() {
     if (resToken) {
       navigate("/browse");
     } else {
-      navigate("/home");
+      navigate("/login");
     }
   }, [navigate]);
 
