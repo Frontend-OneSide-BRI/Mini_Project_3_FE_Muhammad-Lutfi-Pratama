@@ -1,12 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "./header";
 import Banner from "./banner";
 import PopularMovie from "./popular-movie";
 import SwipeMovie from "./swipe-movie";
+import { useGetPopularMovieQuery } from "src/services/Movie/movies-api";
+import { useGenerateTokenQuery } from "src/services/Auth/auth-api";
 
 export default function Home() {
   const [activePage, setActivePage] = useState("home");
+  const { isLoading, data } = useGenerateTokenQuery();
 
+  // fetch popular movie from API rtk query
   return (
     <div>
       <Header activePageListener={page => setActivePage(page)} />

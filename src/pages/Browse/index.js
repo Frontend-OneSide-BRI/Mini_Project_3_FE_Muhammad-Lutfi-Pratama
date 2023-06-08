@@ -6,7 +6,6 @@ import {
 } from "src/components/Molecules/Container";
 import { PrimaryButton } from "src/components/Atom/Button";
 import { useState, useEffect } from "react";
-import { BASE_API_KEY } from "src/config";
 import { useNavigate } from "react-router-dom";
 
 export default function Browse() {
@@ -23,8 +22,6 @@ export default function Browse() {
       navigate("/login");
     }
   }, [navigate]);
-
-  console.log(BASE_API_KEY);
 
   return (
     <div className="flex flex-col py-4 pr-4 md:flex-row">

@@ -1,4 +1,8 @@
+import { useGenerateTokenQuery } from "src/services/Auth/auth-api";
+
 export default function PopularMovie() {
+  const { isLoading, data } = useGenerateTokenQuery();
+
   return (
     <div className="w-5/6 px-8 mx-auto mt-16 md:mt-[80px] md:w-7/12 md:float-right md:mr-6 lg:w-6/12 xl:mr-12 lg:px-12 xl:px-20">
       <section className="flex justify-between mb-4">
