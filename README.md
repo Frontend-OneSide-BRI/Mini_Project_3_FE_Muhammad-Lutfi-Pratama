@@ -1,3 +1,26 @@
+## Tech
+
+- React
+- React Router DOM
+- Redux Toolkit Query
+- Eslint, Prettier, Lint Staged, Husky
+- Swiper
+- Tailwindcss
+
+## Features Highlight
+
+- Redux Toolkit Query services
+  - Get popular movies
+  - Get top rated movies
+  - Get trending movies
+  - Search movies
+  - Get movie detail
+- Authentication
+  - Login
+  - Register
+- Structured folder
+- Responsive design
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
