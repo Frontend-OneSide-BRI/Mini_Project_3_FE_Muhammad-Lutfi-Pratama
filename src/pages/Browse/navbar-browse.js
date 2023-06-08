@@ -1,5 +1,6 @@
 import { logoHorizontalLight } from "src/assets/Logo";
 import React from "react";
+import { ProfileMenuIcon } from "src/components/Atom/MenuIcon";
 
 export default function NavbarBrowse() {
   return (
@@ -26,7 +27,7 @@ export default function NavbarBrowse() {
             </ul>
           </div>
         </div>
-        <div className="w-20 h-20 rounded-full lg:w-24 lg:h-24 bg-slate-500"></div>
+        <ProfileMenuIcon />
       </nav>
     </React.Fragment>
   );
